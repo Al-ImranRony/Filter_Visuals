@@ -1,0 +1,16 @@
+PODS:
+  - RMPZoomTransitionAnimator (1.0.3)
+
+DEPENDENCIES:
+  - RMPZoomTransitionAnimator
+
+SPEC REPOS:
+  trunk:
+    - RMPZoomTransitionAnimator
+
+SPEC CHECKSUMS:
+  RMPZoomTransitionAnimator: 33ded739d91052810c05c8e553663cc9ec79275b
+
+PODFILE CHECKSUM: 0ec93fdb203d27fe932d830b5737089159a0ae53
+
+COCOAPODS: 1.11.2

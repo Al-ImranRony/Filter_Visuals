@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AF959F57B8751360808A9E1 /* Pods_FilterVisuals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87F7C69354B956B1E30504F5 /* Pods_FilterVisuals.framework */; };
+		2D17A41F26F74C9400238E84 /* Curve2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D17A41C26F74C9400238E84 /* Curve2.png */; };
+		2D17A42126F76E2400238E84 /* Curve2.acv in Resources */ = {isa = PBXBuildFile; fileRef = 2D17A42026F76E2400238E84 /* Curve2.acv */; };
+		2D4230FF26F377AF001CE68C /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D4230FB26F377AF001CE68C /* lookup_amatorka.png */; };
+		2D42310226F38078001CE68C /* TealiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D42310126F38078001CE68C /* TealiumHelper.swift */; };
+		2D42311226F38B19001CE68C /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D42310C26F38867001CE68C /* GPUImage.framework */; };
+		2D42311326F38B3F001CE68C /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D42310C26F38867001CE68C /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D4BC324270C913600837F63 /* HolderCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4BC322270C913600837F63 /* HolderCollectionViewCell.m */; };
+		2D4BC325270C913600837F63 /* HolderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4BC323270C913600837F63 /* HolderCollectionViewCell.xib */; };
 		2DAF3D4726F3191800BC0C51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF3D4626F3191800BC0C51 /* AppDelegate.m */; };
 		2DAF3D4A26F3191800BC0C51 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF3D4926F3191800BC0C51 /* SceneDelegate.m */; };
 		2DAF3D4D26F3191800BC0C51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF3D4C26F3191800BC0C51 /* ViewController.m */; };
@@ -14,9 +23,81 @@
 		2DAF3D5226F3191900BC0C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF3D5126F3191900BC0C51 /* Assets.xcassets */; };
 		2DAF3D5526F3191900BC0C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF3D5326F3191900BC0C51 /* LaunchScreen.storyboard */; };
 		2DAF3D5826F3191900BC0C51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAF3D5726F3191900BC0C51 /* main.m */; };
+		2DAF402326F3253E00BC0C51 /* Curve1.acv in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF402226F3253E00BC0C51 /* Curve1.acv */; };
+		2DB1F35C271416C4004571A9 /* ImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1F35A271416C4004571A9 /* ImageDetailViewController.m */; };
+		2DB1F35D271416C4004571A9 /* ImageDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DB1F35B271416C4004571A9 /* ImageDetailViewController.xib */; };
+		2DB770AF273124430049A22A /* PolynomialTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB770AE273124430049A22A /* PolynomialTransformer.swift */; };
+		2DB770B12731258D0049A22A /* PolynomialTransformer+LAPACK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB770B02731258D0049A22A /* PolynomialTransformer+LAPACK.swift */; };
+		2DB770B3273125C60049A22A /* PolynomialTransformer+ImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB770B2273125C60049A22A /* PolynomialTransformer+ImageResize.swift */; };
+		2DB770B5273125F10049A22A /* PolynomialEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB770B4273125F10049A22A /* PolynomialEditor.swift */; };
+		2DB770B7273128BA0049A22A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB770B6273128BA0049A22A /* ContentView.swift */; };
+		2DB770BB27316E080049A22A /* CurveDetailsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB770BA27316E080049A22A /* CurveDetailsInterface.swift */; };
+		2DCC61F1270ACB58005BACF8 /* brokenGlass2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DCC61F0270ACB58005BACF8 /* brokenGlass2.jpg */; };
+		2DCC61F3270AF615005BACF8 /* Life1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DCC61F2270AF615005BACF8 /* Life1.png */; };
+		2DCC61F5270AF6D7005BACF8 /* Color-Boost1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DCC61F4270AF6D7005BACF8 /* Color-Boost1.png */; };
+		2DDDE33A26F6FB970044B386 /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDE33726F6FB970044B386 /* lookup_miss_etikate.png */; };
+		2DFD0A86270DA59A00F285FD /* TextureEffect.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A77270DA59900F285FD /* TextureEffect.png */; };
+		2DFD0A88270DA59A00F285FD /* VintageTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A7B270DA59900F285FD /* VintageTexture.png */; };
+		2DFD0A89270DA59A00F285FD /* texture4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A7C270DA59900F285FD /* texture4.jpg */; };
+		2DFD0A8A270DA59A00F285FD /* whiteTexture.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A7D270DA59900F285FD /* whiteTexture.jpeg */; };
+		2DFD0A8B270DA59A00F285FD /* texture2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A7E270DA59900F285FD /* texture2.jpeg */; };
+		2DFD0A8C270DA59A00F285FD /* PurpleTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A7F270DA59900F285FD /* PurpleTexture.png */; };
+		2DFD0A8D270DA59A00F285FD /* VintageTexture2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A80270DA59900F285FD /* VintageTexture2.png */; };
+		2DFD0A8E270DA59A00F285FD /* texture3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A81270DA59900F285FD /* texture3.jpg */; };
+		2DFD0A8F270DA59A00F285FD /* texture1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A82270DA59900F285FD /* texture1.jpeg */; };
+		2DFD0A90270DA59A00F285FD /* WaterdropTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A83270DA59900F285FD /* WaterdropTexture.png */; };
+		2DFD0A91270DA59A00F285FD /* texture5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A84270DA59900F285FD /* texture5.jpeg */; };
+		2DFD0A92270DA59A00F285FD /* NoiseTextureImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD0A85270DA59A00F285FD /* NoiseTextureImage.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2D42310926F38867001CE68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D42310326F38867001CE68C /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		2D42310B26F38867001CE68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D42310326F38867001CE68C /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		2D42310D26F38888001CE68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2D42310326F38867001CE68C /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE209E41943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2DAF402026F31B0100BC0C51 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D42311326F38B3F001CE68C /* GPUImage.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2829B3B380A61147409F590F /* Pods-FilterVisuals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilterVisuals.release.xcconfig"; path = "Target Support Files/Pods-FilterVisuals/Pods-FilterVisuals.release.xcconfig"; sourceTree = "<group>"; };
+		2D17A41C26F74C9400238E84 /* Curve2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Curve2.png; sourceTree = "<group>"; };
+		2D17A42026F76E2400238E84 /* Curve2.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = Curve2.acv; sourceTree = "<group>"; };
+		2D4230FB26F377AF001CE68C /* lookup_amatorka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_amatorka.png; sourceTree = "<group>"; };
+		2D42310026F38077001CE68C /* FilterVisuals-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FilterVisuals-Bridging-Header.h"; sourceTree = "<group>"; };
+		2D42310126F38078001CE68C /* TealiumHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TealiumHelper.swift; sourceTree = "<group>"; };
+		2D42310326F38867001CE68C /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = "../../GPUImage-master/framework/GPUImage.xcodeproj"; sourceTree = "<group>"; };
+		2D4BC321270C913600837F63 /* HolderCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HolderCollectionViewCell.h; sourceTree = "<group>"; };
+		2D4BC322270C913600837F63 /* HolderCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HolderCollectionViewCell.m; sourceTree = "<group>"; };
+		2D4BC323270C913600837F63 /* HolderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolderCollectionViewCell.xib; sourceTree = "<group>"; };
 		2DAF3D4226F3191800BC0C51 /* FilterVisuals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilterVisuals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DAF3D4526F3191800BC0C51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2DAF3D4626F3191800BC0C51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +110,34 @@
 		2DAF3D5426F3191900BC0C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DAF3D5626F3191900BC0C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DAF3D5726F3191900BC0C51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2DAF402226F3253E00BC0C51 /* Curve1.acv */ = {isa = PBXFileReference; lastKnownFileType = file; path = Curve1.acv; sourceTree = "<group>"; };
+		2DB1F359271416C4004571A9 /* ImageDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDetailViewController.h; sourceTree = "<group>"; };
+		2DB1F35A271416C4004571A9 /* ImageDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDetailViewController.m; sourceTree = "<group>"; };
+		2DB1F35B271416C4004571A9 /* ImageDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageDetailViewController.xib; sourceTree = "<group>"; };
+		2DB770AE273124430049A22A /* PolynomialTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolynomialTransformer.swift; sourceTree = "<group>"; };
+		2DB770B02731258D0049A22A /* PolynomialTransformer+LAPACK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PolynomialTransformer+LAPACK.swift"; sourceTree = "<group>"; };
+		2DB770B2273125C60049A22A /* PolynomialTransformer+ImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PolynomialTransformer+ImageResize.swift"; sourceTree = "<group>"; };
+		2DB770B4273125F10049A22A /* PolynomialEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolynomialEditor.swift; sourceTree = "<group>"; };
+		2DB770B6273128BA0049A22A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2DB770BA27316E080049A22A /* CurveDetailsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveDetailsInterface.swift; sourceTree = "<group>"; };
+		2DCC61F0270ACB58005BACF8 /* brokenGlass2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brokenGlass2.jpg; sourceTree = "<group>"; };
+		2DCC61F2270AF615005BACF8 /* Life1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Life1.png; sourceTree = "<group>"; };
+		2DCC61F4270AF6D7005BACF8 /* Color-Boost1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Color-Boost1.png"; sourceTree = "<group>"; };
+		2DDDE33726F6FB970044B386 /* lookup_miss_etikate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lookup_miss_etikate.png; sourceTree = "<group>"; };
+		2DFD0A77270DA59900F285FD /* TextureEffect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TextureEffect.png; sourceTree = "<group>"; };
+		2DFD0A7B270DA59900F285FD /* VintageTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VintageTexture.png; sourceTree = "<group>"; };
+		2DFD0A7C270DA59900F285FD /* texture4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture4.jpg; sourceTree = "<group>"; };
+		2DFD0A7D270DA59900F285FD /* whiteTexture.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whiteTexture.jpeg; sourceTree = "<group>"; };
+		2DFD0A7E270DA59900F285FD /* texture2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture2.jpeg; sourceTree = "<group>"; };
+		2DFD0A7F270DA59900F285FD /* PurpleTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PurpleTexture.png; sourceTree = "<group>"; };
+		2DFD0A80270DA59900F285FD /* VintageTexture2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VintageTexture2.png; sourceTree = "<group>"; };
+		2DFD0A81270DA59900F285FD /* texture3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture3.jpg; sourceTree = "<group>"; };
+		2DFD0A82270DA59900F285FD /* texture1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture1.jpeg; sourceTree = "<group>"; };
+		2DFD0A83270DA59900F285FD /* WaterdropTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaterdropTexture.png; sourceTree = "<group>"; };
+		2DFD0A84270DA59900F285FD /* texture5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = texture5.jpeg; sourceTree = "<group>"; };
+		2DFD0A85270DA59A00F285FD /* NoiseTextureImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NoiseTextureImage.png; sourceTree = "<group>"; };
+		7E5572F5B73708D3F6CB6EBB /* Pods-FilterVisuals.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilterVisuals.debug.xcconfig"; path = "Target Support Files/Pods-FilterVisuals/Pods-FilterVisuals.debug.xcconfig"; sourceTree = "<group>"; };
+		87F7C69354B956B1E30504F5 /* Pods_FilterVisuals.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilterVisuals.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +145,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D42311226F38B19001CE68C /* GPUImage.framework in Frameworks */,
+				2AF959F57B8751360808A9E1 /* Pods_FilterVisuals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D42310426F38867001CE68C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D42310A26F38867001CE68C /* libGPUImage.a */,
+				2D42310C26F38867001CE68C /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2DAF3D3926F3191800BC0C51 = {
 			isa = PBXGroup;
 			children = (
 				2DAF3D4426F3191800BC0C51 /* FilterVisuals */,
 				2DAF3D4326F3191800BC0C51 /* Products */,
+				2DAF401E26F31AFD00BC0C51 /* Frameworks */,
+				B5F50E6AED15E528E58B8A89 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +183,87 @@
 		2DAF3D4426F3191800BC0C51 /* FilterVisuals */ = {
 			isa = PBXGroup;
 			children = (
+				2DB770AD273123FB0049A22A /* PolynomialCurveComponents */,
+				2DCC61EF270AC81C005BACF8 /* SupportingFiles */,
+				2D42310326F38867001CE68C /* GPUImage.xcodeproj */,
 				2DAF3D4526F3191800BC0C51 /* AppDelegate.h */,
 				2DAF3D4626F3191800BC0C51 /* AppDelegate.m */,
 				2DAF3D4826F3191800BC0C51 /* SceneDelegate.h */,
 				2DAF3D4926F3191800BC0C51 /* SceneDelegate.m */,
 				2DAF3D4B26F3191800BC0C51 /* ViewController.h */,
 				2DAF3D4C26F3191800BC0C51 /* ViewController.m */,
+				2DB1F359271416C4004571A9 /* ImageDetailViewController.h */,
+				2DB1F35A271416C4004571A9 /* ImageDetailViewController.m */,
+				2DB1F35B271416C4004571A9 /* ImageDetailViewController.xib */,
+				2D42310126F38078001CE68C /* TealiumHelper.swift */,
 				2DAF3D4E26F3191800BC0C51 /* Main.storyboard */,
 				2DAF3D5126F3191900BC0C51 /* Assets.xcassets */,
 				2DAF3D5326F3191900BC0C51 /* LaunchScreen.storyboard */,
 				2DAF3D5626F3191900BC0C51 /* Info.plist */,
 				2DAF3D5726F3191900BC0C51 /* main.m */,
+				2D42310026F38077001CE68C /* FilterVisuals-Bridging-Header.h */,
+				2D4BC321270C913600837F63 /* HolderCollectionViewCell.h */,
+				2D4BC322270C913600837F63 /* HolderCollectionViewCell.m */,
+				2D4BC323270C913600837F63 /* HolderCollectionViewCell.xib */,
 			);
 			path = FilterVisuals;
+			sourceTree = "<group>";
+		};
+		2DAF401E26F31AFD00BC0C51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87F7C69354B956B1E30504F5 /* Pods_FilterVisuals.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DB770AD273123FB0049A22A /* PolynomialCurveComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2DB770AE273124430049A22A /* PolynomialTransformer.swift */,
+				2DB770B02731258D0049A22A /* PolynomialTransformer+LAPACK.swift */,
+				2DB770B2273125C60049A22A /* PolynomialTransformer+ImageResize.swift */,
+				2DB770B4273125F10049A22A /* PolynomialEditor.swift */,
+				2DB770B6273128BA0049A22A /* ContentView.swift */,
+				2DB770BA27316E080049A22A /* CurveDetailsInterface.swift */,
+			);
+			path = PolynomialCurveComponents;
+			sourceTree = "<group>";
+		};
+		2DCC61EF270AC81C005BACF8 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2DAF402226F3253E00BC0C51 /* Curve1.acv */,
+				2D17A42026F76E2400238E84 /* Curve2.acv */,
+				2DCC61F0270ACB58005BACF8 /* brokenGlass2.jpg */,
+				2DCC61F2270AF615005BACF8 /* Life1.png */,
+				2DFD0A85270DA59A00F285FD /* NoiseTextureImage.png */,
+				2DFD0A7F270DA59900F285FD /* PurpleTexture.png */,
+				2DFD0A82270DA59900F285FD /* texture1.jpeg */,
+				2DFD0A7E270DA59900F285FD /* texture2.jpeg */,
+				2DFD0A81270DA59900F285FD /* texture3.jpg */,
+				2DFD0A7C270DA59900F285FD /* texture4.jpg */,
+				2DFD0A84270DA59900F285FD /* texture5.jpeg */,
+				2DFD0A77270DA59900F285FD /* TextureEffect.png */,
+				2DFD0A7B270DA59900F285FD /* VintageTexture.png */,
+				2DFD0A80270DA59900F285FD /* VintageTexture2.png */,
+				2DFD0A83270DA59900F285FD /* WaterdropTexture.png */,
+				2DFD0A7D270DA59900F285FD /* whiteTexture.jpeg */,
+				2DCC61F4270AF6D7005BACF8 /* Color-Boost1.png */,
+				2D4230FB26F377AF001CE68C /* lookup_amatorka.png */,
+				2DDDE33726F6FB970044B386 /* lookup_miss_etikate.png */,
+				2D17A41C26F74C9400238E84 /* Curve2.png */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		B5F50E6AED15E528E58B8A89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E5572F5B73708D3F6CB6EBB /* Pods-FilterVisuals.debug.xcconfig */,
+				2829B3B380A61147409F590F /* Pods-FilterVisuals.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,13 +273,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DAF3D5B26F3191900BC0C51 /* Build configuration list for PBXNativeTarget "FilterVisuals" */;
 			buildPhases = (
+				3F58724E8FCDB9C19CE998ED /* [CP] Check Pods Manifest.lock */,
 				2DAF3D3E26F3191800BC0C51 /* Sources */,
 				2DAF3D3F26F3191800BC0C51 /* Frameworks */,
 				2DAF3D4026F3191800BC0C51 /* Resources */,
+				2DAF402026F31B0100BC0C51 /* CopyFiles */,
+				8CCA77499B4AF88341E90A55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2D42310E26F38888001CE68C /* PBXTargetDependency */,
 			);
 			name = FilterVisuals;
 			productName = FilterVisuals;
@@ -106,6 +300,7 @@
 				TargetAttributes = {
 					2DAF3D4126F3191800BC0C51 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -120,6 +315,12 @@
 			mainGroup = 2DAF3D3926F3191800BC0C51;
 			productRefGroup = 2DAF3D4326F3191800BC0C51 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2D42310426F38867001CE68C /* Products */;
+					ProjectRef = 2D42310326F38867001CE68C /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2DAF3D4126F3191800BC0C51 /* FilterVisuals */,
@@ -127,32 +328,130 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		2D42310A26F38867001CE68C /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = 2D42310926F38867001CE68C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2D42310C26F38867001CE68C /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = 2D42310B26F38867001CE68C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		2DAF3D4026F3191800BC0C51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFD0A89270DA59A00F285FD /* texture4.jpg in Resources */,
+				2DFD0A8F270DA59A00F285FD /* texture1.jpeg in Resources */,
+				2DFD0A92270DA59A00F285FD /* NoiseTextureImage.png in Resources */,
+				2D4230FF26F377AF001CE68C /* lookup_amatorka.png in Resources */,
+				2DCC61F3270AF615005BACF8 /* Life1.png in Resources */,
+				2DFD0A88270DA59A00F285FD /* VintageTexture.png in Resources */,
+				2D17A42126F76E2400238E84 /* Curve2.acv in Resources */,
+				2DAF402326F3253E00BC0C51 /* Curve1.acv in Resources */,
 				2DAF3D5526F3191900BC0C51 /* LaunchScreen.storyboard in Resources */,
+				2D17A41F26F74C9400238E84 /* Curve2.png in Resources */,
+				2DFD0A8B270DA59A00F285FD /* texture2.jpeg in Resources */,
+				2D4BC325270C913600837F63 /* HolderCollectionViewCell.xib in Resources */,
+				2DFD0A86270DA59A00F285FD /* TextureEffect.png in Resources */,
+				2DFD0A8D270DA59A00F285FD /* VintageTexture2.png in Resources */,
 				2DAF3D5226F3191900BC0C51 /* Assets.xcassets in Resources */,
+				2DFD0A8E270DA59A00F285FD /* texture3.jpg in Resources */,
 				2DAF3D5026F3191800BC0C51 /* Main.storyboard in Resources */,
+				2DFD0A8C270DA59A00F285FD /* PurpleTexture.png in Resources */,
+				2DFD0A8A270DA59A00F285FD /* whiteTexture.jpeg in Resources */,
+				2DCC61F5270AF6D7005BACF8 /* Color-Boost1.png in Resources */,
+				2DB1F35D271416C4004571A9 /* ImageDetailViewController.xib in Resources */,
+				2DCC61F1270ACB58005BACF8 /* brokenGlass2.jpg in Resources */,
+				2DFD0A90270DA59A00F285FD /* WaterdropTexture.png in Resources */,
+				2DDDE33A26F6FB970044B386 /* lookup_miss_etikate.png in Resources */,
+				2DFD0A91270DA59A00F285FD /* texture5.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F58724E8FCDB9C19CE998ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FilterVisuals-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CCA77499B4AF88341E90A55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilterVisuals/Pods-FilterVisuals-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilterVisuals/Pods-FilterVisuals-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FilterVisuals/Pods-FilterVisuals-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DAF3D3E26F3191800BC0C51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB770B5273125F10049A22A /* PolynomialEditor.swift in Sources */,
+				2DB770B7273128BA0049A22A /* ContentView.swift in Sources */,
+				2D4BC324270C913600837F63 /* HolderCollectionViewCell.m in Sources */,
+				2DB770B3273125C60049A22A /* PolynomialTransformer+ImageResize.swift in Sources */,
+				2DB770B12731258D0049A22A /* PolynomialTransformer+LAPACK.swift in Sources */,
 				2DAF3D4D26F3191800BC0C51 /* ViewController.m in Sources */,
 				2DAF3D4726F3191800BC0C51 /* AppDelegate.m in Sources */,
+				2DB770AF273124430049A22A /* PolynomialTransformer.swift in Sources */,
 				2DAF3D5826F3191900BC0C51 /* main.m in Sources */,
+				2D42310226F38078001CE68C /* TealiumHelper.swift in Sources */,
+				2DB770BB27316E080049A22A /* CurveDetailsInterface.swift in Sources */,
+				2DB1F35C271416C4004571A9 /* ImageDetailViewController.m in Sources */,
 				2DAF3D4A26F3191800BC0C51 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2D42310E26F38888001CE68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImageFramework;
+			targetProxy = 2D42310D26F38888001CE68C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2DAF3D4E26F3191800BC0C51 /* Main.storyboard */ = {
@@ -288,36 +587,47 @@
 		};
 		2DAF3D5C26F3191900BC0C51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E5572F5B73708D3F6CB6EBB /* Pods-FilterVisuals.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28T5VPKKDG;
 				INFOPLIST_FILE = FilterVisuals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ron.FilterVisuals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FilterVisuals/FilterVisuals-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		2DAF3D5D26F3191900BC0C51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2829B3B380A61147409F590F /* Pods-FilterVisuals.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28T5VPKKDG;
 				INFOPLIST_FILE = FilterVisuals/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ron.FilterVisuals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FilterVisuals/FilterVisuals-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
