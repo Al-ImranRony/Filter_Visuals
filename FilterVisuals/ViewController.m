@@ -18,6 +18,12 @@
 #import <GPUImage/GPUImagePoissonBlendFilter.h>
 #import <GPUImage/GPUImageSourceOverBlendFilter.h>
 #import <GPUImage/GPUImageTwoInputCrossTextureSamplingFilter.h>
+#import <GPUImage/GPUImageThresholdSketchFilter.h>
+#import <GPUImage/GPUImageLocalBinaryPatternFilter.h>
+#import <GPUImage/GPUImageHarrisCornerDetectionFilter.h>
+#import <GPUImage/GPUImagePosterizeFilter.h>
+#import <GPUImage/GPUImagePerlinNoiseFilter.h>
+#import <GPUImage/GPUImageColorPackingFilter.h>
 
 #import "ImageDetailViewController.h"
 #import "RMPZoomTransitionAnimator/RMPZoomTransitionAnimator.h"
@@ -82,6 +88,27 @@ NSString *ImagesCollectionCellID = @"ImageCell";
         case 5:
             outputImage = [self applyToneCurve2Filter:inputImage];
             break;
+        case 6:
+            outputImage = [self thresholdSketchFilter:inputImage overlayImageName:@"PurpleTexture"];
+            break;
+        case 7:
+            outputImage = [self localBinaryPatternFilter:inputImage overlayImageName:@"lookup_miss_etikate"];
+            break;
+        case 8:
+            outputImage = [self posterizeFilter:inputImage overlayImageName:@"PurpleTexture"];
+            break;
+        case 9:
+            outputImage = [self perlinNoiseFilter:inputImage overlayImageName:@"PurpleTexture"];
+            break;
+        case 10:
+            outputImage = [self colorPackingFilter:inputImage overlayImageName:@"PurpleTexture"];
+            break;
+        case 11:
+            outputImage = [self normalNoiseFilter:inputImage overlayImageName:@"PurpleTexture"];
+            break;
+        case 12:
+            outputImage = [self textureNoiseFilter:inputImage overlayImageName:@"VintageTexture"];
+            break;
         default:
             outputImage = [self applyCIZoomBlurFilter:inputImage];
             break;
@@ -116,10 +143,10 @@ NSString *ImagesCollectionCellID = @"ImageCell";
     UIImage *holderImage = [UIImage imageNamed:self.sampleImages[indexPath.item]];
     self.sourceImage = holderImage;
 
-    self.firstImageView.image = [self chooseFilter: self.sourceImage forNumber: 2];
+    self.firstImageView.image = [self chooseFilter: self.sourceImage forNumber: 12];
 //    self.inputFilterName.text = self.sampleImages[indexPath.item];
-    self.secondImageView.image = [self chooseFilter: self.sourceImage forNumber: 5];
-    [self RGBToneCurveFilter:self.sourceImage];
+    self.secondImageView.image = [self chooseFilter: self.sourceImage forNumber: 11];
+//    [self RGBToneCurveFilter:self.sourceImage];
 //    self.appliedFilterName.text = self.sampleImages[indexPath.item];
     
     NSString *currentImageName = [self.sampleImages objectAtIndex:indexPath.row];
@@ -127,7 +154,6 @@ NSString *ImagesCollectionCellID = @"ImageCell";
     
 //    ImageDetailViewController *detailVC = [[ImageDetailViewController alloc] init];
 //    detailVC.selectedImageName = currentImageName;
-    
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -137,7 +163,7 @@ NSString *ImagesCollectionCellID = @"ImageCell";
 
 - (void)RGBToneCurveFilter:(UIImage *)inputImage{
     UIViewController *detailsVC = [[CurveDetailsInterface new] makeHostingVCWithSourceImage:inputImage];
-    [self presentModalViewController:detailsVC animated:YES];
+    [self presentViewController:detailsVC animated:YES completion:nil];
 }
 
 - (UIImage *)applyToneCurve2Filter:(UIImage *)inputImage{
@@ -146,6 +172,146 @@ NSString *ImagesCollectionCellID = @"ImageCell";
     UIImage* blurredImage = [toneCurveFilter imageByFilteringImage:inputImage];
     
     return blurredImage;
+}
+
+//Noise Filters
+-(UIImage *) normalNoiseFilter:(UIImage *) inputImage overlayImageName:(NSString *)imageName{
+    CIImage* image = [CIImage imageWithCGImage:inputImage.CGImage];
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    CIFilter* colorNoise = [CIFilter filterWithName:@"CIRandomGenerator"];
+    CIImage* noiseImage = colorNoise.outputImage;
+    
+    CIFilter* whiteningFilter = [CIFilter filterWithName:@"CIColorMatrix"];
+    CIVector* whitenVector = [CIVector vectorWithX:0 Y:1 Z:0 W:0];
+    CIVector* fineGrain = [CIVector vectorWithX:0 Y:0.005 Z:0 W:0];
+    CIVector* zeroVector = [CIVector vectorWithX:0 Y:0 Z:0 W:0];
+    [whiteningFilter setValue:noiseImage forKey:kCIInputImageKey];
+    [whiteningFilter setValue:whitenVector forKey:@"inputRVector"];
+    [whiteningFilter setValue:whitenVector forKey:@"inputGVector"];
+    [whiteningFilter setValue:whitenVector forKey:@"inputBVector"];
+    [whiteningFilter setValue:fineGrain forKey:@"inputAVector"];
+    [whiteningFilter setValue:zeroVector forKey:@"inputBiasVector"];
+    CIImage* whiteSpecks = whiteningFilter.outputImage;
+    
+    CIFilter* speckCompositor = [CIFilter filterWithName:@"CISourceOverCompositing"];
+    [speckCompositor setValue:whiteSpecks forKey:kCIInputImageKey];
+    [speckCompositor setValue:image forKey:kCIInputBackgroundImageKey];
+    CIImage* speckledImage = speckCompositor.outputImage;
+    
+    CGAffineTransform verticalScale = CGAffineTransformMakeScale(1.5, 25);
+    CIImage* transformedNoise = [noiseImage imageByApplyingTransform:verticalScale];
+    
+    CIFilter* darkeningFilter = [CIFilter filterWithName:@"CIColorMatrix"];
+    CIVector* darkenVector = [CIVector vectorWithX:4 Y:0 Z:0 W:0];
+    CIVector* darkenBias = [CIVector vectorWithX:0 Y:1 Z:1 W:1];
+    [darkeningFilter setValue:transformedNoise forKey:kCIInputImageKey];
+    [darkeningFilter setValue:darkenVector forKey:@"inputRVector"];
+    [darkeningFilter setValue:zeroVector forKey:@"inputGVector"];
+    [darkeningFilter setValue:zeroVector forKey:@"inputBVector"];
+    [darkeningFilter setValue:zeroVector forKey:@"inputAVector"];
+    [darkeningFilter setValue:darkenBias forKey:@"inputBiasVector"];
+    CIImage* randomScratches = darkeningFilter.outputImage;
+    
+    CIFilter* grayscaleFilter = [CIFilter filterWithName:@"CIMinimumComponent"];
+    [grayscaleFilter setValue:randomScratches forKey:kCIInputImageKey];
+    CIImage* darkScratches = grayscaleFilter.outputImage;
+    
+    CIFilter* oldFilmCompositor = [CIFilter filterWithName:@"CIMultiplyCompositing"];
+    [oldFilmCompositor setValue:darkScratches forKey:kCIInputImageKey];
+    [oldFilmCompositor setValue:speckledImage forKey:kCIInputBackgroundImageKey];
+    CIImage* oldFilmImage = oldFilmCompositor.outputImage;
+    
+    CIImage* finalImage = [oldFilmImage imageByCroppingToRect:image.extent];
+    UIImage *filteredImage = [UIImage imageWithCIImage:finalImage];
+    CGImageRef cgimg = [context createCGImage:oldFilmImage fromRect:[oldFilmImage extent]];
+    UIImage *newImage = [UIImage imageWithCGImage:cgimg];
+    CGImageRelease(cgimg);
+    context = nil;
+    
+    return filteredImage;
+}
+
+-(UIImage *) textureNoiseFilter:(UIImage *) inputImage overlayImageName:(NSString *)imageName{
+    CIImage* image = [CIImage imageWithCGImage:inputImage.CGImage];
+    CIContext *context = [CIContext contextWithOptions:nil];
+    
+    UIImage *mImage = [UIImage imageNamed: imageName];
+    CIImage* maskImage = [CIImage imageWithCGImage:mImage.CGImage];
+    
+    CIFilter* compositor = [CIFilter filterWithName:@"CISourceOverCompositing"];
+    [compositor setValue:maskImage forKey:kCIInputImageKey];
+    [compositor setValue:image forKey:kCIInputBackgroundImageKey];
+    CIImage* outputImage = compositor.outputImage;
+    
+    CIImage* finalImage = [outputImage imageByCroppingToRect:image.extent];
+    UIImage *filteredImage = [UIImage imageWithCIImage:finalImage];
+    context = nil;
+    
+    return filteredImage;
+}
+
+- (UIImage *)thresholdSketchFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName{
+    GPUImageThresholdSketchFilter *thresholdSketchFilter = [[GPUImageThresholdSketchFilter alloc] init];
+    UIImage* filteredImage = [thresholdSketchFilter imageByFilteringImage:inputImage];
+    return filteredImage;
+}
+
+- (UIImage *)localBinaryPatternFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName{
+    UIImage *initialImage = inputImage;
+    GPUImagePicture *inputPicture = [[GPUImagePicture alloc] initWithImage:initialImage];
+    UIImage *overlayImage = [UIImage imageNamed:imageName];
+    GPUImagePicture *overlayPicture = [[GPUImagePicture alloc] initWithImage:overlayImage];
+    GPUImageLocalBinaryPatternFilter *lbpFilter = [[GPUImageLocalBinaryPatternFilter alloc] init];
+    
+    [lbpFilter useNextFrameForImageCapture];
+    
+    [inputPicture addTarget:lbpFilter];
+    [inputPicture processImage];
+    [overlayPicture addTarget:lbpFilter];
+    [overlayPicture processImage];
+    
+    UIImage *processedImage = [lbpFilter imageFromCurrentFramebuffer];
+    return processedImage;
+}
+
+- (UIImage *)harrisCornerDetectionFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName{
+    GPUImageHarrisCornerDetectionFilter *hcdFilter = [[GPUImageHarrisCornerDetectionFilter alloc] init];
+    UIImage* filteredImage = [hcdFilter imageByFilteringImage:inputImage];
+    return filteredImage;
+}
+
+- (UIImage *)posterizeFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName{
+    GPUImagePosterizeFilter *posterizeFilter = [[GPUImagePosterizeFilter alloc] init];
+    UIImage* filteredImage = [posterizeFilter imageByFilteringImage:inputImage];
+    return filteredImage;
+}
+
+- (UIImage *)perlinNoiseFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName{
+    UIImage *initialImage = inputImage;
+    GPUImagePicture *inputPicture = [[GPUImagePicture alloc] initWithImage:initialImage];
+    UIImage *overlayImage = [UIImage imageNamed:imageName];
+    GPUImagePicture *overlayPicture = [[GPUImagePicture alloc] initWithImage:overlayImage];
+    GPUImagePerlinNoiseFilter *perlinFilter = [[GPUImagePerlinNoiseFilter alloc] init];
+    perlinFilter.colorStart = (GPUVector4){0.0, 0.0, 0.0, 0.0};
+    perlinFilter.colorFinish = (GPUVector4){1.0, 1.0, 1.0, 1.0};
+    perlinFilter.scale = 1.0;
+    
+    [perlinFilter useNextFrameForImageCapture];
+    
+    [inputPicture addTarget:perlinFilter];
+    [inputPicture processImage];
+    [overlayPicture addTarget:perlinFilter];
+    [overlayPicture processImage];
+    
+    UIImage *processedImage = [perlinFilter imageFromCurrentFramebuffer];
+    return processedImage;
+}
+
+- (UIImage *)colorPackingFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName{
+    GPUImageColorPackingFilter *colorPackingFilter = [[GPUImageColorPackingFilter alloc] init];
+    UIImage* filteredImage = [colorPackingFilter imageByFilteringImage:inputImage];
+    return filteredImage;
 }
 
 - (UIImage *)alphaBlendFilter:(UIImage *)inputImage overlayImageName:(NSString *)imageName {

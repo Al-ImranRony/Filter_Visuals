@@ -593,14 +593,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28T5VPKKDG;
+				DEVELOPMENT_TEAM = F2XURX372U;
 				INFOPLIST_FILE = FilterVisuals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ron.FilterVisuals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tewst.FilterVisuals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FilterVisuals/FilterVisuals-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -617,14 +617,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28T5VPKKDG;
+				DEVELOPMENT_TEAM = F2XURX372U;
 				INFOPLIST_FILE = FilterVisuals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ron.FilterVisuals;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tewst.FilterVisuals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FilterVisuals/FilterVisuals-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
