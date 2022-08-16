@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  FilterVisuals
 //
-//  Created by Bitmorpher 4 on 9/16/21.
+//  Created by iRny on 9/16/21.
 //
 
 #import <UIKit/UIKit.h>

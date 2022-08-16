@@ -2,7 +2,7 @@
 //  PolynomialTransformer+LAPACK.swift
 //  FilterVisuals
 //
-//  Created by Bitmorpher 4 on 11/2/21.
+//  Created by iRny on 11/2/21.
 //
 
 import Foundation

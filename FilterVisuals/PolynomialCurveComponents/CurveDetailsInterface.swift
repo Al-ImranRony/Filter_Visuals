@@ -2,8 +2,8 @@
 //  CurveDetailsInterface.swift
 //  FilterVisuals
 //
-//  Created by Bitmorpher 4 on 11/2/21.
-//  iRny
+//  Created by iRny on 11/2/21.
+//  
 
 import Foundation
 import UIKit

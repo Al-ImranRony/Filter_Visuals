@@ -2,7 +2,7 @@
 //  HolderCollectionViewCell.m
 //  FilterVisuals
 //
-//  Created by Bitmorpher 4 on 10/5/21.
+//  Created by iRny on 10/5/21.
 //
 
 #import "HolderCollectionViewCell.h"

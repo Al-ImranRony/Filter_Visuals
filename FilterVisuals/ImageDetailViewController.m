@@ -2,7 +2,7 @@
 //  ImageDetailViewController.m
 //  FilterVisuals
 //
-//  Created by Bitmorpher 4 on 10/11/21.
+//  Created by iRny on 10/11/21.
 //
 
 #import "ImageDetailViewController.h"

@@ -2,7 +2,7 @@
 //  ViewController.m
 //  FilterVisuals
 //
-//  Created by Bitmorpher 4 on 9/16/21.
+//  Created by iRny on 9/16/21.
 //
 
 #import "ViewController.h"
@@ -77,13 +77,13 @@ NSString *ImagesCollectionCellID = @"ImageCell";
             outputImage = [self applyCIColorCubeFilter: inputImage];
             break;
         case 2:
-            outputImage = [self poissonBlendFilter:inputImage overlayImageName:@"PurpleTexture"];
+            outputImage = [self poissonBlendFilter:inputImage overlayImageName:@"j10"];
             break;
         case 3:
             outputImage = [self glassDistortionFilter:inputImage overlayImageName:@"texture1"];
             break;
         case 4:
-            outputImage = [self displacementDistortionFilter:inputImage overlayImageName:@"texture1"];
+            outputImage = [self poissonBlendFilter:inputImage overlayImageName:@"j3"];
             break;
         case 5:
             outputImage = [self applyToneCurve2Filter:inputImage];
@@ -95,10 +95,10 @@ NSString *ImagesCollectionCellID = @"ImageCell";
             outputImage = [self localBinaryPatternFilter:inputImage overlayImageName:@"lookup_miss_etikate"];
             break;
         case 8:
-            outputImage = [self posterizeFilter:inputImage overlayImageName:@"PurpleTexture"];
+            outputImage = [self posterizeFilter:inputImage overlayImageName:@"texture2"];
             break;
         case 9:
-            outputImage = [self perlinNoiseFilter:inputImage overlayImageName:@"PurpleTexture"];
+            outputImage = [self perlinNoiseFilter:inputImage overlayImageName:@"texture2"];
             break;
         case 10:
             outputImage = [self colorPackingFilter:inputImage overlayImageName:@"PurpleTexture"];
@@ -107,7 +107,10 @@ NSString *ImagesCollectionCellID = @"ImageCell";
             outputImage = [self normalNoiseFilter:inputImage overlayImageName:@"PurpleTexture"];
             break;
         case 12:
-            outputImage = [self textureNoiseFilter:inputImage overlayImageName:@"VintageTexture"];
+            outputImage = [self textureNoiseFilter:inputImage overlayImageName:@"texture12"];
+            break;
+        case 13:
+            outputImage = [self textureNoiseFilter:inputImage overlayImageName:@"j3"];
             break;
         default:
             outputImage = [self applyCIZoomBlurFilter:inputImage];
@@ -143,9 +146,9 @@ NSString *ImagesCollectionCellID = @"ImageCell";
     UIImage *holderImage = [UIImage imageNamed:self.sampleImages[indexPath.item]];
     self.sourceImage = holderImage;
 
-    self.firstImageView.image = [self chooseFilter: self.sourceImage forNumber: 12];
+    self.firstImageView.image = [self chooseFilter: self.sourceImage forNumber: 2];
 //    self.inputFilterName.text = self.sampleImages[indexPath.item];
-    self.secondImageView.image = [self chooseFilter: self.sourceImage forNumber: 11];
+    self.secondImageView.image = [self chooseFilter: self.sourceImage forNumber: 4];
 //    [self RGBToneCurveFilter:self.sourceImage];
 //    self.appliedFilterName.text = self.sampleImages[indexPath.item];
     
